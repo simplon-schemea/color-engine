@@ -1,3 +1,5 @@
+@import "src/app/styles/variables";
+
 $filter: saturate(0.2) brightness(0.7);
 $invert: 0.8;
 
@@ -50,6 +52,7 @@ $invert: 0.8;
 
       .hex {
         filter: $filter;
+        color: rgb($current);
       }
 
       .rgb {
@@ -90,9 +93,10 @@ $invert: 0.8;
 
       border-radius: 5px;
 
+      background-color: rgb($current);
       transition: background-color 0.2s linear;
 
-      box-shadow: white 0 0 10px 0px, white 0 0 40px -5px;
+      box-shadow: rgb($current) 0 0 10px 0, rgb($current) 0 0 40px -5px;
     }
   }
 
@@ -100,11 +104,11 @@ $invert: 0.8;
   button {
     cursor: pointer;
 
-    background-color: rgba(var(--bg-primary), 0.85);
+    background-color: rgba($bg-primary, 0.85);
     padding: 10px 30px;
 
     color: #333;
-    border: 2px solid rgb(var(--fg-secondary));
+    border: 2px solid rgb($fg-secondary);
     font-weight: bold;
     font-size: 1.05em;
 
@@ -121,14 +125,14 @@ $invert: 0.8;
 
     opacity: 0.8;
 
-    box-shadow: rgb(var(--fg-primary)) 0 0 8px -2px, rgb(var(--fg-primary)) 0 0 15px -4px;
+    box-shadow: rgb($fg-primary) 0 0 8px -2px, rgb($fg-primary) 0 0 15px -4px;
 
     &:hover {
       opacity: 1;
     }
 
     span {
-      color: rgba(var(--fg-primary), 0.95);
+      color: rgba($fg-primary, 0.95);
       transition: color 0.2s linear;
     }
   }

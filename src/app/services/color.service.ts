@@ -70,6 +70,8 @@ export class ColorService {
 
       set(lightPrefix, "brightness", "0.8");
       set(darkPrefix, "brightness", "0.4");
+
+      document.documentElement.style.setProperty("--current", `${ color.red }, ${ color.green }, ${ color.blue }`);
     });
 
     Object.assign(that, {

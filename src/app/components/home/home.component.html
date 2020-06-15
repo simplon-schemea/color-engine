@@ -1,7 +1,7 @@
 <div class="home-container">
   <div class="box">
     <div class="info">
-      <span class="hex" [ngStyle]="{ color: hex$ | async }">{{ hex$ | async }}</span>
+      <span class="hex">{{ hex$ | async }}</span>
       <hr/>
       <div class="rgb">
         <span>red: {{ red$ | async }}</span>
@@ -9,10 +9,9 @@
         <span>blue: {{ blue$ | async }}</span>
       </div>
     </div>
-    <div class="background" [ngStyle]="{ backgroundColor: hex$ | async }"></div>
+    <div class="background"></div>
   </div>
   <button (click)="changeColor()">
     <span>COLOR CHANGE</span>
   </button>
 </div>
-
